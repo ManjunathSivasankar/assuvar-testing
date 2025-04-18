@@ -60,10 +60,14 @@ const Footer = () => {
             <ul className="space-y-3">
               {[
                 'Web Development',
-                '3D Design',
-                'UI/UX Design',
-                'Digital Marketing',
-                'Brand Strategy',
+                'Website Design',
+                'Graphic Design',
+                'Automation Scripts',
+                'Chatbots',
+                'CRM',
+                'ERP',
+                'Social Media Management',
+                
               ].map((service) => (
                 <li key={service}>
                   <Link
