@@ -244,8 +244,7 @@ const Services = () => {
                 Let's transform your ideas into reality. Contact us today to discuss your project.
               </p>
               <Link to="/contact"
-                className="inline-block bg-secondary text-black font-montserrat font-bold py-4 px-8 rounded-lg hover:bg-secondary/80 transition-colors duration-300">
-                  Get in Touch</Link>
+                className="inline-block bg-secondary text-black font-montserrat font-bold py-4 px-8 rounded-lg hover:bg-secondary/80 transition-colors duration-300">Get in Touch</Link>
             </div>
           </div>
         </div>
