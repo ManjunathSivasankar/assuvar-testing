@@ -112,7 +112,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-montserrat font-semibold mb-1">Email</h3>
-                    <p className="font-roboto text-white/70">info@assuvar.com</p>
+                    <p className="font-roboto text-white/70">info.assuvar@gmail.com</p>
                   </div>
                 </div>
                 
@@ -137,7 +137,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-montserrat font-semibold mb-1">Address</h3>
-                    <p className="font-roboto text-white/70">123 Tech Street, Innovation City</p>
+                    <p className="font-roboto text-white/70">Hosur, Banglore, India</p>
                   </div>
                 </div>
               </div>

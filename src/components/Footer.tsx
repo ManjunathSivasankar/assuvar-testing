@@ -1,7 +1,14 @@
-
 import { Link } from 'react-router-dom';
+import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
 
 const Footer = () => {
+  const socialLinks = [
+    { icon: <Instagram className="w-5 h-5" />, href: 'https://instagram.com/assuvar', name: 'instagram' },
+    { icon: <Linkedin className="w-5 h-5" />, href: 'https://linkedin.com/company/assuvar', name: 'linkedin' },
+    { icon: <Twitter className="w-5 h-5" />, href: 'https://twitter.com/assuvar', name: 'twitter' },
+    { icon: <Facebook className="w-5 h-5" />, href: 'https://facebook.com/assuvar', name: 'facebook' },
+  ];
+
   return (
     <footer className="bg-black text-white py-16">
       <div className="container mx-auto px-6">
@@ -14,21 +21,16 @@ const Footer = () => {
               Innovative solutions with cutting-edge technology
             </p>
             <div className="flex space-x-4">
-              {[
-                { icon: 'facebook', href: '#' },
-                { icon: 'twitter', href: '#' },
-                { icon: 'instagram', href: '#' },
-                { icon: 'linkedin', href: '#' },
-              ].map((social) => (
+              {socialLinks.map((social) => (
                 <a
-                  key={social.icon}
+                  key={social.name}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full flex items-center justify-center bg-black border border-secondary/30 text-secondary hover:bg-secondary hover:text-black transition-colors duration-300"
                 >
-                  <span className="sr-only">{social.icon}</span>
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 22c-5.523 0-10-4.477-10-10S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
-                  </svg>
+                  <span className="sr-only">{social.name}</span>
+                  {social.icon}
                 </a>
               ))}
             </div>
@@ -42,6 +44,7 @@ const Footer = () => {
                 { label: 'About', path: '/about' },
                 { label: 'Services', path: '/services' },
                 { label: 'Contact', path: '/contact' },
+                { label: 'Testimonials', path: '/Testimonials' },
               ].map((link) => (
                 <li key={link.path}>
                   <Link
@@ -91,7 +94,7 @@ const Footer = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                   </svg>
                 </span>
-                123 Tech Street, Innovation City
+                Hosur, Banglore, India
               </li>
               <li className="flex items-start">
                 <span className="mr-3 mt-1 text-secondary">
@@ -99,7 +102,7 @@ const Footer = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                   </svg>
                 </span>
-                info@assuvar.com
+                info.assuvar@gmail.com
               </li>
               <li className="flex items-start">
                 <span className="mr-3 mt-1 text-secondary">
