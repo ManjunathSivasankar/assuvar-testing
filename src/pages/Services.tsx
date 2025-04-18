@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import ThreeScene from '@/components/ThreeSimple';
 import Navbar from '@/components/Navbar';
@@ -6,21 +5,23 @@ import Footer from '@/components/Footer';
 
 const Services = () => {
   useEffect(() => {
-    // Simple animation with Intersection Observer
     const sections = document.querySelectorAll('.animate-section');
-    
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const element = entry.target as HTMLElement;
-          element.style.transition = 'opacity 1s ease, transform 1s ease';
-          element.style.opacity = '1';
-          element.style.transform = 'translateY(0)';
-          observer.unobserve(element);
-        }
-      });
-    }, { threshold: 0.1 });
-    
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const element = entry.target as HTMLElement;
+            element.style.transition = 'opacity 1s ease, transform 1s ease';
+            element.style.opacity = '1';
+            element.style.transform = 'translateY(0)';
+            observer.unobserve(element);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
     sections.forEach((section) => {
       if (section instanceof HTMLElement) {
         section.style.opacity = '0';
@@ -28,7 +29,7 @@ const Services = () => {
         observer.observe(section);
       }
     });
-    
+
     return () => {
       observer.disconnect();
     };
@@ -38,7 +39,7 @@ const Services = () => {
     <div className="min-h-screen bg-black text-white">
       <ThreeScene />
       <Navbar />
-      
+
       {/* Hero section */}
       <section className="min-h-screen flex items-center justify-center relative pt-20">
         <div className="container mx-auto px-6 text-center">
@@ -49,23 +50,23 @@ const Services = () => {
             Elevate your digital presence with our innovative solutions
           </p>
           <div className="w-24 h-24 mx-auto border-b-2 border-secondary flex items-center justify-center">
-            <svg 
-              className="w-8 h-8 text-secondary animate-bounce" 
-              fill="none" 
-              stroke="currentColor" 
+            <svg
+              className="w-8 h-8 text-secondary animate-bounce"
+              fill="none"
+              stroke="currentColor"
               viewBox="0 0 24 24"
             >
-              <path 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                strokeWidth="2" 
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M19 14l-7 7m0 0l-7-7m7 7V3"
               />
             </svg>
           </div>
         </div>
       </section>
-      
+
       {/* Services overview */}
       <section className="py-20">
         <div className="container mx-auto px-6">
@@ -76,7 +77,7 @@ const Services = () => {
               We provide comprehensive digital solutions tailored to your unique needs. Our services combine technical expertise with creative insight to deliver exceptional results.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
@@ -102,7 +103,7 @@ const Services = () => {
                 description: 'User-centered design that creates intuitive, engaging interfaces that delight users and drive conversions.',
                 icon: (
                   <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 5h16M4 13h6v6H4zM16 13h4v6h-4z" />
                   </svg>
                 ),
               },
@@ -121,7 +122,7 @@ const Services = () => {
                 description: 'Comprehensive brand development that establishes a strong identity and connects with your target audience.',
                 icon: (
                   <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 7h.01M7 3h5l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7V7a4 4 0 014-4z" />
                   </svg>
                 ),
               },
@@ -135,8 +136,8 @@ const Services = () => {
                 ),
               },
             ].map((service, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="bg-white/5 backdrop-blur-sm rounded-lg p-8 group hover:bg-white/10 transition-colors duration-300 animate-section"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
@@ -150,7 +151,7 @@ const Services = () => {
           </div>
         </div>
       </section>
-      
+
       {/* Process section */}
       <section className="py-20 bg-white/5">
         <div className="container mx-auto px-6">
@@ -161,93 +162,53 @@ const Services = () => {
               We follow a structured approach to ensure every project is delivered on time, on budget, and exceeds expectations.
             </p>
           </div>
-          
+
           <div className="relative">
-            {/* Process timeline line */}
             <div className="absolute top-0 bottom-0 left-1/2 w-1 bg-secondary/30 transform -translate-x-1/2 hidden md:block" />
-            
             <div className="space-y-12 md:space-y-0">
               {[
-                {
-                  number: '01',
-                  title: 'Discovery',
-                  description: 'We begin by understanding your business, goals, target audience, and project requirements.',
-                },
-                {
-                  number: '02',
-                  title: 'Strategy',
-                  description: 'We develop a comprehensive plan tailored to your specific needs and objectives.',
-                },
-                {
-                  number: '03',
-                  title: 'Design',
-                  description: 'Our creative team crafts visually stunning designs that align with your brand and engage users.',
-                },
-                {
-                  number: '04',
-                  title: 'Development',
-                  description: 'We bring designs to life with clean, efficient code and cutting-edge technology.',
-                },
-                {
-                  number: '05',
-                  title: 'Testing',
-                  description: 'Rigorous quality assurance ensures everything works flawlessly across all platforms.',
-                },
-                {
-                  number: '06',
-                  title: 'Launch',
-                  description: 'We deploy your project and provide ongoing support to ensure continued success.',
-                },
+                'Discovery',
+                'Strategy',
+                'Design',
+                'Development',
+                'Testing',
+                'Launch',
               ].map((step, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className={`flex flex-col md:flex-row items-center animate-section ${
                     index % 2 === 0 ? 'md:flex-row-reverse' : ''
                   }`}
                   style={{ animationDelay: `${index * 0.2}s` }}
                 >
                   <div className="w-full md:w-1/2 p-6 flex justify-center md:justify-end">
-                    <div className={`text-center md:text-right ${index % 2 === 0 ? 'md:text-left' : ''}`}>
-                      <div className="inline-block text-4xl font-montserrat font-black text-secondary mb-2">
-                        {step.number}
-                      </div>
-                      <h3 className="text-2xl font-montserrat font-bold mb-3">{step.title}</h3>
-                      <p className="font-roboto text-white/70 max-w-md">{step.description}</p>
+                    <div className={`text-center md:text-left`}>
+                      <h3 className="text-3xl font-bold mb-2">Step {index + 1}: {step}</h3>
+                      <p className="text-white/70 font-roboto max-w-md">
+                        {/* Custom descriptions for each step */}
+                        {{
+                          0: 'We begin by understanding your business, goals, and project requirements.',
+                          1: 'We craft a strategic plan tailored to your needs.',
+                          2: 'Designs that align with your brand and user expectations.',
+                          3: 'Efficient development with modern technologies.',
+                          4: 'Testing across devices and platforms to ensure quality.',
+                          5: 'Smooth launch and continued support.',
+                        }[index]}
+                      </p>
                     </div>
                   </div>
-                  
-                  <div className="relative flex justify-center items-center z-10">
-                    <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-black font-bold">
-                      {parseInt(step.number)}
+                  <div className="w-full md:w-1/2 p-6 flex justify-center">
+                    <div className="w-16 h-16 rounded-full bg-secondary text-black font-bold flex items-center justify-center text-xl">
+                      {index + 1}
                     </div>
                   </div>
-                  
-                  <div className="w-full md:w-1/2 p-6 hidden md:block" />
                 </div>
               ))}
             </div>
           </div>
         </div>
       </section>
-      
-      {/* CTA section */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="relative rounded-lg overflow-hidden animate-section">
-            <div className="absolute inset-0 bg-gradient-to-tr from-black via-black/70 to-secondary/30" />
-            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1531297484001-80022131f5a1')] bg-cover bg-center opacity-40 mix-blend-overlay" />
-            
-            <div className="relative p-12 md:p-24 text-center">
-              <h2 className="text-4xl md:text-5xl font-montserrat font-black mb-6">Ready to Start Your Project?</h2>
-              <p className="text-xl font-roboto text-white/80 max-w-2xl mx-auto mb-8">
-                Let's transform your ideas into reality. Contact us today to discuss your project.
-              </p>
-              <a href="/contact"
-                className="inline-block bg-secondary text-black font-montserrat font-bold py-4 px-8 rounded-lg hover:bg-secondary/80 transition-colors duration-300">Get in Touch</a>
-            </div>
-          </div>
-        </div>
-      </section>
+
       <Footer />
     </div>
   );
