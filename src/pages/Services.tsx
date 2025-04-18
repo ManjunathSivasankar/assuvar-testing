@@ -3,7 +3,6 @@ import { useEffect } from 'react';
 import ThreeScene from '@/components/ThreeSimple';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Link } from 'lucide-react';
 
 const Services = () => {
   useEffect(() => {
@@ -243,8 +242,9 @@ const Services = () => {
               <p className="text-xl font-roboto text-white/80 max-w-2xl mx-auto mb-8">
                 Let's transform your ideas into reality. Contact us today to discuss your project.
               </p>
-              <Link to="/contact"
-                className="inline-block bg-secondary text-black font-montserrat font-bold py-4 px-8 rounded-lg hover:bg-secondary/80 transition-colors duration-300">Get in Touch</Link>
+              <a href="/contact"
+                className="inline-block bg-secondary text-black font-montserrat font-bold py-4 px-8 rounded-lg hover:bg-secondary/80 transition-colors duration-300">Get in Touch
+              </a>
             </div>
           </div>
         </div>
