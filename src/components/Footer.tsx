@@ -3,8 +3,11 @@ import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
 
 const Footer = () => {
   const socialLinks = [
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> parent of 8283176 (media2132)
     { icon: <Instagram className="w-5 h-5" />, href: 'https://instagram.com/assuvar', name: 'instagram' },
     { icon: <Linkedin className="w-5 h-5" />, href: 'https://linkedin.com/company/assuvar', name: 'linkedin' },
     { icon: <Twitter className="w-5 h-5" />, href: 'https://twitter.com/assuvar', name: 'twitter' },
