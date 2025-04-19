@@ -147,6 +147,85 @@ const Services = () => {
         </div>
       </section>
 
+       {/* Process section */}
+       <section className="py-20 bg-white/5">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16 animate-section">
+            <h2 className="text-4xl font-montserrat font-bold mb-6">Our Process</h2>
+            <div className="w-20 h-1 bg-secondary mx-auto mb-8" />
+            <p className="text-lg font-roboto text-white/70 max-w-3xl mx-auto">
+              We follow a structured approach to ensure every project is delivered on time, on budget, and exceeds expectations.
+            </p>
+          </div>
+          
+          <div className="relative">
+            {/* Process timeline line */}
+            <div className="absolute top-0 bottom-0 left-1/2 w-1 bg-secondary/30 transform -translate-x-1/2 hidden md:block" />
+            
+            <div className="space-y-12 md:space-y-0">
+              {[
+                {
+                  number: '01',
+                  title: 'Discovery',
+                  description: 'We begin by understanding your business, goals, target audience, and project requirements.',
+                },
+                {
+                  number: '02',
+                  title: 'Strategy',
+                  description: 'We develop a comprehensive plan tailored to your specific needs and objectives.',
+                },
+                {
+                  number: '03',
+                  title: 'Design',
+                  description: 'Our creative team crafts visually stunning designs that align with your brand and engage users.',
+                },
+                {
+                  number: '04',
+                  title: 'Development',
+                  description: 'We bring designs to life with clean, efficient code and cutting-edge technology.',
+                },
+                {
+                  number: '05',
+                  title: 'Testing',
+                  description: 'Rigorous quality assurance ensures everything works flawlessly across all platforms.',
+                },
+                {
+                  number: '06',
+                  title: 'Launch',
+                  description: 'We deploy your project and provide ongoing support to ensure continued success.',
+                },
+              ].map((step, index) => (
+                <div 
+                  key={index} 
+                  className={`flex flex-col md:flex-row items-center animate-section ${
+                    index % 2 === 0 ? 'md:flex-row-reverse' : ''
+                  }`}
+                  style={{ animationDelay: `${index * 0.2}s` }}
+                >
+                  <div className="w-full md:w-1/2 p-6 flex justify-center md:justify-end">
+                    <div className={`text-center md:text-right ${index % 2 === 0 ? 'md:text-left' : ''}`}>
+                      <div className="inline-block text-4xl font-montserrat font-black text-secondary mb-2">
+                        {step.number}
+                      </div>
+                      <h3 className="text-2xl font-montserrat font-bold mb-3">{step.title}</h3>
+                      <p className="font-roboto text-white/70 max-w-md">{step.description}</p>
+                    </div>
+                  </div>
+                  
+                  <div className="relative flex justify-center items-center z-10">
+                    <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-black font-bold">
+                      {parseInt(step.number)}
+                    </div>
+                  </div>
+                  
+                  <div className="w-full md:w-1/2 p-6 hidden md:block" />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA section */}
       <section className="py-20">
         <div className="container mx-auto px-6">

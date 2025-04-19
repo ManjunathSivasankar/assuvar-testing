@@ -3,16 +3,10 @@ import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
 
 const Footer = () => {
   const socialLinks = [
-<<<<<<< HEAD
-
-
-=======
->>>>>>> parent of 8283176 (media2132)
-    { icon: <Instagram className="w-5 h-5" />, href: 'https://instagram.com/assuvar', name: 'instagram' },
-    { icon: <Linkedin className="w-5 h-5" />, href: 'https://linkedin.com/company/assuvar', name: 'linkedin' },
-    { icon: <Twitter className="w-5 h-5" />, href: 'https://twitter.com/assuvar', name: 'twitter' },
+    { icon: <Instagram className="w-5 h-5" />, href: 'https://www.instagram.com/assuvarcloud/', name: 'instagram' },
+    { icon: <Linkedin className="w-5 h-5" />, href: 'https://www.linkedin.com/company/assuvar/about/?viewAsMember=true', name: 'linkedin' },
+    { icon: <Twitter className="w-5 h-5" />, href: 'https://x.com/assuvarcloud?t=jtpS8wNt4DaLtHBQIU-yCw&s=09', name: 'twitter' },
     { icon: <Facebook className="w-5 h-5" />, href: 'https://facebook.com/assuvar', name: 'facebook' },
-
   ];
 
   return (
@@ -50,6 +44,7 @@ const Footer = () => {
                 { label: 'About', path: '/about' },
                 { label: 'Services', path: '/services' },
                 { label: 'Contact', path: '/contact' },
+                { label: 'Testimonials', path: '/Testimonials' },
               ].map((link) => (
                 <li key={link.path}>
                   <Link
@@ -65,30 +60,17 @@ const Footer = () => {
           
           <div>
             <h4 className="text-lg font-montserrat font-semibold mb-6">Services</h4>
-            <div className='flex'>
             <ul className="space-y-3">
               {[
                 'Web Development',
                 'Website Design',
-                'ERP',
+                'Graphic Design',
                 'Automation Scripts',
-              ].map((service) => (
-                <li key={service}>
-                  <Link
-                    to="/services"
-                    className="font-roboto text-white/70 hover:text-secondary transition-colors duration-300"
-                  >
-                    {service}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <ul className="space-y-3">
-              {[
-                'Social Media Management',  
                 'Chatbots',
                 'CRM',
-                'Graphic Design',
+                'ERP',
+                'Social Media Management',
+                
               ].map((service) => (
                 <li key={service}>
                   <Link
@@ -100,7 +82,6 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-            </div>
           </div>
           
           <div>

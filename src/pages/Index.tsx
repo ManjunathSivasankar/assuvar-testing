@@ -69,7 +69,7 @@ const Index = () => {
       {/* Hero section */}
       <section ref={heroRef} className="h-screen flex items-center justify-center relative">
         <div className="container mx-auto px-6 text-center hero-content">
-          <h1 className="text-8xl md:text-9xl font-montserrat font-black mb-8">
+          <h1 className="text-6xl md:text-7xl font-montserrat font-black mb-6">
             <span className="text-white">ASSU</span>
             <span className="text-secondary">VAR</span>
           </h1>
@@ -95,7 +95,8 @@ const Index = () => {
       
       {/* Split text section */}
       <SplitText text="ASSUVAR" className="text-[20vw] h-[50vh]" />
-
+      
+      
       
       {/* Services section */}
       <section ref={servicesRef} className="py-20 bg-white/5">
@@ -173,7 +174,6 @@ const Index = () => {
       </section>
 
 
-
       {/* About section */}
       <section className="py-20">
         <div className="container mx-auto px-6">
@@ -214,10 +214,7 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-     
       
-
       {/* Projects section */}
       <section className="py-20">
         <div className="container mx-auto px-6">
