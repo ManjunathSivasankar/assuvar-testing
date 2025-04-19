@@ -6,7 +6,7 @@ const Footer = () => {
     { icon: <Instagram className="w-5 h-5" />, href: 'https://www.instagram.com/assuvarcloud/', name: 'instagram' },
     { icon: <Linkedin className="w-5 h-5" />, href: 'https://www.linkedin.com/company/assuvar/about/?viewAsMember=true', name: 'linkedin' },
     { icon: <Twitter className="w-5 h-5" />, href: 'https://x.com/assuvarcloud?t=jtpS8wNt4DaLtHBQIU-yCw&s=09', name: 'twitter' },
-    { icon: <Facebook className="w-5 h-5" />, href: 'https://facebook.com/assuvar', name: 'facebook' },
+
   ];
 
   return (
