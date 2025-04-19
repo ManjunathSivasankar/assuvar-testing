@@ -69,7 +69,7 @@ const Index = () => {
       {/* Hero section */}
       <section ref={heroRef} className="h-screen flex items-center justify-center relative">
         <div className="container mx-auto px-6 text-center hero-content">
-          <h1 className="text-8xl md:text-9xl font-montserrat font-black mb-8">
+          <h1 className="text-6xl md:text-7xl font-montserrat font-black mb-6">
             <span className="text-white">ASSU</span>
             <span className="text-secondary">VAR</span>
           </h1>
@@ -96,46 +96,7 @@ const Index = () => {
       {/* Split text section */}
       <SplitText text="ASSUVAR" className="text-[20vw] h-[50vh]" />
       
-      {/* About section */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="animate-section">
-              <h2 className="text-4xl font-montserrat font-bold mb-6">About Us</h2>
-              <div className="w-20 h-1 bg-secondary mb-8" />
-              <p className="text-lg font-roboto text-white/70 mb-6">
-                ASSUVAR is a cutting-edge digital agency specializing in creating immersive web experiences that combine stunning design with innovative technology.
-              </p>
-              <p className="text-lg font-roboto text-white/70 mb-8">
-                Our team of experts brings together technical expertise and creative vision to deliver exceptional results that exceed expectations.
-              </p>
-              <Link
-                to="/about"
-                className="inline-flex items-center font-montserrat font-bold text-secondary hover:text-white transition-colors duration-300"
-              >
-                Learn More
-                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </Link>
-            </div>
-            <div className="relative h-[400px] animate-section">
-              <div className="absolute inset-0 bg-gradient-to-tr from-black via-black/50 to-secondary/30 rounded-lg overflow-hidden">
-                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5')] bg-cover bg-center opacity-50 mix-blend-overlay" />
-              </div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-24 h-24 border-4 border-secondary rounded-full flex items-center justify-center">
-                  <div className="w-16 h-16 bg-secondary rounded-full flex items-center justify-center">
-                    <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
       
       {/* Services section */}
       <section ref={servicesRef} className="py-20 bg-white/5">
@@ -160,8 +121,8 @@ const Index = () => {
                 ),
               },
               {
-                title: 'Graphic Design',
-                description: 'Professional graphic design services that help your brand stand out with compelling visuals.',
+                title: 'Social Media Management',
+                description: 'Comprehensive social media management to boost your online presence and engagement.',
                 icon: (
                   <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
@@ -169,8 +130,8 @@ const Index = () => {
                 ),
               },
               {
-                title: 'UI/UX Design',
-                description: 'User-centered design that creates intuitive, engaging interfaces.',
+                title: 'Chatbots',
+                description: 'Intelligent chatbot solutions to enhance customer service and engagement.',
                 icon: (
                   <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
@@ -208,6 +169,48 @@ const Index = () => {
             >
               View All Services
             </Link>
+          </div>
+        </div>
+      </section>
+
+
+      {/* About section */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="animate-section">
+              <h2 className="text-4xl font-montserrat font-bold mb-6">About Us</h2>
+              <div className="w-20 h-1 bg-secondary mb-8" />
+              <p className="text-lg font-roboto text-white/70 mb-6">
+                ASSUVAR is a cutting-edge digital agency specializing in creating immersive web experiences that combine stunning design with innovative technology.
+              </p>
+              <p className="text-lg font-roboto text-white/70 mb-8">
+                Our team of experts brings together technical expertise and creative vision to deliver exceptional results that exceed expectations.
+              </p>
+              <Link
+                to="/about"
+                className="inline-flex items-center font-montserrat font-bold text-secondary hover:text-white transition-colors duration-300"
+              >
+                Learn More
+                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </Link>
+            </div>
+            <div className="relative h-[400px] animate-section">
+              <div className="absolute inset-0 bg-gradient-to-tr from-black via-black/50 to-secondary/30 rounded-lg overflow-hidden">
+                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5')] bg-cover bg-center opacity-50 mix-blend-overlay" />
+              </div>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-24 h-24 border-4 border-secondary rounded-full flex items-center justify-center">
+                  <div className="w-16 h-16 bg-secondary rounded-full flex items-center justify-center">
+                    <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
