@@ -165,7 +165,7 @@ const About = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
             {[
               {
                 name: 'Alex Morgan',
@@ -188,26 +188,28 @@ const About = () => {
                 image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1',
               },
             ].map((member, index) => (
-              <div 
-                key={index} 
-                className="relative group animate-section"
+              <div
+                key={index}
+                className="flex justify-center items-center p-6 animate-section"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
-                <div className="relative overflow-hidden rounded-lg aspect-square">
-                  <div 
-                    className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                    style={{ backgroundImage: `url(${member.image})` }}
+                <div className="flex items-center gap-6 bg-black rounded-xl shadow-lg p-6">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-24 h-24 object-cover rounded-full border-2 border-secondary"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60" />
+
+                  <div>
+                    <h3 className="text-xl font-bold text-white-900 font-montserrat">{member.name}</h3>
+                    <p className="text-secondary">{member.role}</p>
+                  </div>
                 </div>
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h3 className="text-xl font-montserrat font-bold text-white">{member.name}</h3>
-                  <p className="text-secondary">{member.role}</p>
-                </div>
-                <div className="absolute inset-0 bg-secondary/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100 rounded-lg" />
               </div>
             ))}
           </div>
+
+
         </div>
       </section>
       <Footer />
