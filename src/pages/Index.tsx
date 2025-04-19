@@ -95,9 +95,7 @@ const Index = () => {
       
       {/* Split text section */}
       <SplitText text="ASSUVAR" className="text-[20vw] h-[50vh]" />
-      
-<<<<<<< HEAD
-      
+
       
       {/* Services section */}
       <section ref={servicesRef} className="py-20 bg-white/5">
@@ -175,8 +173,7 @@ const Index = () => {
       </section>
 
 
-=======
->>>>>>> parent of 9891a46 (home1)
+
       {/* About section */}
       <section className="py-20">
         <div className="container mx-auto px-6">
@@ -217,85 +214,10 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+     
       
-<<<<<<< HEAD
-=======
-      {/* Services section */}
-      <section ref={servicesRef} className="py-20 bg-white/5">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16 animate-section">
-            <h2 className="text-4xl font-montserrat font-bold mb-6">Our Services</h2>
-            <div className="w-20 h-1 bg-secondary mx-auto mb-8" />
-            <p className="text-lg font-roboto text-white/70 max-w-3xl mx-auto">
-              We offer a comprehensive range of services to help you achieve your digital goals. From web development to 3D design, we have the expertise to bring your vision to life.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                title: 'Web Development',
-                description: 'Custom websites and web applications built with cutting-edge technology.',
-                icon: (
-                  <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                  </svg>
-                ),
-              },
-              {
-                title: 'Graphic Design',
-                description: 'Professional graphic design services that help your brand stand out with compelling visuals.',
-                icon: (
-                  <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
-                  </svg>
-                ),
-              },
-              {
-                title: 'UI/UX Design',
-                description: 'User-centered design that creates intuitive, engaging interfaces.',
-                icon: (
-                  <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
-                  </svg>
-                ),
-              },
-            ].map((service, index) => (
-              <div 
-                key={index} 
-                className="bg-white/5 backdrop-blur-sm rounded-lg p-8 text-center hover:bg-white/10 transition-colors duration-300 animate-section"
-                style={{ animationDelay: `${index * 0.2}s` }}
-              >
-                <div className="text-secondary mb-6 mx-auto w-20 h-20 flex items-center justify-center border-2 border-secondary/30 rounded-full">
-                  {service.icon}
-                </div>
-                <h3 className="text-2xl font-montserrat font-bold mb-4">{service.title}</h3>
-                <p className="font-roboto text-white/70 mb-6">{service.description}</p>
-                <Link
-                  to="/services"
-                  className="inline-flex items-center font-montserrat font-bold text-secondary hover:text-white transition-colors duration-300"
-                >
-                  Learn More
-                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                  </svg>
-                </Link>
-              </div>
-            ))}
-          </div>
-          
-          <div className="text-center mt-12">
-            <Link
-              to="/services"
-              className="inline-block bg-secondary text-black font-montserrat font-bold py-4 px-8 rounded-lg hover:bg-secondary/80 transition-colors duration-300"
-            >
-              View All Services
-            </Link>
-          </div>
-        </div>
-      </section>
-      
->>>>>>> parent of 9891a46 (home1)
+
       {/* Projects section */}
       <section className="py-20">
         <div className="container mx-auto px-6">
