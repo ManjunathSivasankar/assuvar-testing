@@ -22,7 +22,7 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <Link to="/" className="text-2xl font-montserrat font-bold text-white">
+        <Link to="/" className="text-2xl font-montserrat font-bold text-white" >
           ASSU<span className="text-accent">VAR</span>
         </Link>
         
@@ -31,10 +31,10 @@ const Navbar = () => {
             { path: '/', label: 'Home' },
             { path: '/about', label: 'About' },
             { path: '/services', label: 'Services' },
-            { path: '/testimonials', label: 'Testimonials' },
             { path: '/contact', label: 'Contact' },
           ].map((link) => (
-            <Link
+            <Link 
+            onClick={() => window.scrollTo({ top: document.getElementById('services').offsetTop, behavior: 'smooth' })}
               key={link.path}
               to={link.path}
               className={`font-roboto relative text-sm uppercase tracking-widest
