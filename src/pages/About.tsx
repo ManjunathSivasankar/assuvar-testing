@@ -71,14 +71,35 @@ const About = () => {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="animate-section">
-              <h2 className="text-4xl font-montserrat font-bold mb-6 text-white">Our Story</h2>
+              <h2 className="text-4xl font-montserrat font-bold mb-6 text-white">From Classrooms to Code: Our Story</h2>
               <div className="w-20 h-1 bg-secondary mb-8" />
               <p className="text-lg font-roboto text-white/70 mb-6">
-                Founded in 2020, ASSUVAR began with a vision to bridge the gap between technology and artistic expression. Our team of dedicated professionals combines technical expertise with creative insight to deliver exceptional digital experiences.
+              It all started with curiosity — a group of college students tinkering with code, experimenting with design, and dreaming a little bigger each day. What began as late-night projects and side hustles quickly evolved into something more meaningful: a shared mission to use our skills to make a difference.              
               </p>
-              <p className="text-lg font-roboto text-white/70">
-                What sets us apart is our commitment to innovation and our ability to transform complex ideas into intuitive, visually stunning solutions that resonate with users and drive business growth.
+
+              <p className="text-lg font-roboto text-white/70 mb-6">
+              We realized that the digital world is full of possibilities — and businesses, creators, and startups often need a hand bringing their ideas to life. So, we stepped up.              
               </p>
+
+              <p className="text-lg font-roboto text-white/70 mb-6">
+              Today, we’re a team of student developers, designers, and digital enthusiasts offering professional online services — from website building and chatbot development to social media management and more.
+              </p>
+              
+              <p className="text-lg font-roboto text-white/70 mb-6">
+              What sets us apart?
+              We use our knowledge, our passion, and our fresh perspective to deliver smart solutions that work — all while learning, growing, and pushing boundaries.              
+              </p>
+
+              <p className="text-lg font-roboto text-white/70 mb-6">
+              We may still be students, but our work speaks for itself. We don’t just deliver projects — we build experiences, form connections, and solve real-world problems with heart.
+              </p>
+
+              
+              <p className="text-lg font-roboto text-white/70 mb-6">
+              Let’s build something amazing — together.              
+              </p>
+              
+
             </div>
             <div className="relative h-[400px] animate-section">
               <div className="absolute inset-0 bg-gradient-to-tr from-black via-black/50 to-secondary/30 rounded-lg overflow-hidden">

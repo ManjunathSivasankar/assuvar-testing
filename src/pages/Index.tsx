@@ -157,12 +157,25 @@ const Index = () => {
             <div className="animate-section">
               <h2 className="text-4xl font-montserrat font-bold mb-6">About Us</h2>
               <div className="w-20 h-1 bg-secondary mb-8" />
+              
+              
               <p className="text-lg font-roboto text-white/70 mb-6">
-                ASSUVAR is a cutting-edge digital agency specializing in creating immersive web experiences that combine stunning design with innovative technology.
+              We Don’t Just Build Projects — We Solve Real Problems.
               </p>
+              
               <p className="text-lg font-roboto text-white/70 mb-8">
-                Our team of experts brings together technical expertise and creative vision to deliver exceptional results that exceed expectations.
+              We’re a passionate team of college innovators turning bold ideas into smart, scalable solutions. From custom services to user-friendly products, we design with purpose, powered by creativity and hustle.        
               </p>
+
+              <p className="text-lg font-roboto text-white/70 mb-8">
+              Expect pro-level quality at fair prices — because great results shouldn’t break the bank. We listen. We learn. We build — with you, for impact.
+              </p>
+              
+               <p className="text-lg font-roboto text-white/70 mb-8">
+               Got a challenge? Let’s make it happen.              
+               </p> 
+
+                
               <Link to="/about" className="inline-flex items-center font-montserrat font-bold text-secondary hover:text-white transition-colors duration-300">
                 Learn More
                 <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
