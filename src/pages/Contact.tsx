@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ThreeScene from '@/components/ThreeSimple';
 import Navbar from '@/components/Navbar';
-import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
+import { Instagram, Linkedin, Twitter } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
