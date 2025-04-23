@@ -53,7 +53,7 @@ const Contact = () => {
     { icon: <Instagram className="w-5 h-5" />, href: 'https://instagram.com/assuvar', name: 'instagram' },
     { icon: <Linkedin className="w-5 h-5" />, href: 'https://linkedin.com/company/assuvar', name: 'linkedin' },
     { icon: <Twitter className="w-5 h-5" />, href: 'https://twitter.com/assuvar', name: 'twitter' },
-    { icon: <Facebook className="w-5 h-5" />, href: 'https://facebook.com/assuvar', name: 'facebook' },
+
   ];
 
   return (
