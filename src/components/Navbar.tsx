@@ -1,10 +1,18 @@
 
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { Menu } from 'lucide-react';
+import { useIsMobile } from '@/hooks/use-mobile';
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+} from '@/components/ui/sheet';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  const isMobile = useIsMobile();
   
   useEffect(() => {
     const handleScroll = () => {
@@ -14,6 +22,14 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const navLinks = [
+    { path: '/', label: 'Home' },
+    { path: '/about', label: 'About' },
+    { path: '/services', label: 'Services' },
+    { path: '/testimonials', label: 'Testimonials' },
+    { path: '/contact', label: 'Contact' },
+  ];
 
   return (
     <nav 
@@ -26,13 +42,9 @@ const Navbar = () => {
           ASSU<span className="text-accent">VAR</span>
         </Link>
         
+        {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8">
-          {[
-            { path: '/', label: 'Home' },
-            { path: '/about', label: 'About' },
-            { path: '/services', label: 'Services' },
-            { path: '/contact', label: 'Contact' },
-          ].map((link) => (
+          {navLinks.map((link) => (
             <Link
               key={link.path}
               to={link.path}
@@ -51,23 +63,32 @@ const Navbar = () => {
           ))}
         </div>
         
+        {/* Mobile Navigation */}
         <div className="md:hidden">
-          <button className="text-white">
-            <svg 
-              xmlns="http://www.w3.org/2000/svg" 
-              fill="none" 
-              viewBox="0 0 24 24" 
-              stroke="currentColor" 
-              className="w-6 h-6"
-            >
-              <path 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                strokeWidth={2} 
-                d="M4 6h16M4 12h16M4 18h16" 
-              />
-            </svg>
-          </button>
+          <Sheet>
+            <SheetTrigger asChild>
+              <button className="text-white">
+                <Menu className="w-6 h-6" />
+              </button>
+            </SheetTrigger>
+            <SheetContent side="right" className="bg-black/95 backdrop-blur-md text-white border-secondary pt-16">
+              <div className="flex flex-col space-y-6">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.path}
+                    to={link.path}
+                    className={`font-roboto text-lg uppercase tracking-widest transition-colors ${
+                      location.pathname === link.path 
+                        ? 'text-secondary' 
+                        : 'text-white/80 hover:text-white'
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </nav>
